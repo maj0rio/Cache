@@ -16,7 +16,7 @@ namespace cache {
         
         // search and insert page in cache
         // return page
-        std::string cache_lookup_update(const ptrdiff_t key);
+        std::string cache_lookup_update(const book::Book& book, const ptrdiff_t key);
 
       private:
         ptrdiff_t size_;
