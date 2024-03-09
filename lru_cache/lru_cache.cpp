@@ -3,11 +3,14 @@
 
 #include <stdexcept>
 #include <random>
+#include <unistd.h>
 
-#include <lru_cache.hpp>
-#include <book.hpp>
+#include "lru_cache.hpp"
+#include "book.hpp"
+
 
 const std::string* slow_get_page(const book::Book& book, const ptrdiff_t key) {
+    sleep(2);
     return book.slow_load(key);
 }
 
