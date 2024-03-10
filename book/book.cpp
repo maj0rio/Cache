@@ -36,6 +36,6 @@ const std::string* book::Book::slow_load(const ptrdiff_t key) const {
     if (key <= 0 || key > size_)
         throw std::out_of_range("");
     return &pages.at(key);
-}
+}   
 
 #endif CPP2024_BOOK_CPP
